@@ -1,0 +1,606 @@
+{
+	"intents": [
+		{
+			"intent": "time",
+			"examples": [
+				{
+					"text": "at 9 am"
+				},
+				{
+					"text": "in the morning "
+				},
+				{
+					"text": "in the evening"
+				},
+				{
+					"text": "in the morning"
+				},
+				{
+					"text": "in the afternon"
+				},
+				{
+					"text": "at 9 o clock"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "start_work",
+			"examples": [
+				{
+					"text": "I work hard everyday"
+				},
+				{
+					"text": "I work"
+				},
+				{
+					"text": "I start to work"
+				},
+				{
+					"text": "I start working"
+				},
+				{
+					"text": "I begin work"
+				},
+				{
+					"text": "I enter at"
+				},
+				{
+					"text": "I work all day long"
+				},
+				{
+					"text": "i get up at 6 am, and i go to work at 8 am"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "work",
+			"examples": [
+				{
+					"text": "I work at the cafe"
+				},
+				{
+					"text": "I'm currently working"
+				},
+				{
+					"text": "I have a job"
+				},
+				{
+					"text": "I'm working"
+				},
+				{
+					"text": "I work"
+				},
+				{
+					"text": "I work in a call center"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "direct_positive_answer",
+			"examples": [
+				{
+					"text": "Absolutely"
+				},
+				{
+					"text": "Yes, I play!"
+				},
+				{
+					"text": "Yes, it would be nice"
+				},
+				{
+					"text": "Yes"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "studywork",
+			"examples": [
+				{
+					"text": "I'm working and studenting"
+				},
+				{
+					"text": "both"
+				},
+				{
+					"text": "I work and study"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "job",
+			"examples": [
+				{
+					"text": "about job"
+				},
+				{
+					"text": "job"
+				},
+				{
+					"text": "jobs"
+				},
+				{
+					"text": "my job"
+				},
+				{
+					"text": "let's talk about jobs"
+				},
+				{
+					"text": "i want to talk about work"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "hobbies",
+			"examples": [
+				{
+					"text": "hobbies"
+				},
+				{
+					"text": "let's talk about hobbies"
+				},
+				{
+					"text": "I would like to talk about hobbies"
+				},
+				{
+					"text": "about hobbies"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "friends",
+			"examples": [
+				{
+					"text": "Almost every day"
+				},
+				{
+					"text": "I go to cinema with my friends"
+				},
+				{
+					"text": "We watch movies together"
+				},
+				{
+					"text": "My friends an I go out"
+				},
+				{
+					"text": "When I go out with my friends"
+				},
+				{
+					"text": "I see my friends"
+				},
+				{
+					"text": "I always see them"
+				},
+				{
+					"text": "I see my friends hardly ever"
+				},
+				{
+					"text": "Maybe twice a month. I don't have a lot of free time. "
+				},
+				{
+					"text": "My friends and I"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "welcome",
+			"examples": [
+				{
+					"text": "Hi"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "wakeup",
+			"examples": [
+				{
+					"text": "I wake at"
+				},
+				{
+					"text": "I get up late, most of the time in afternoons"
+				},
+				{
+					"text": "i get up"
+				},
+				{
+					"text": "I wake"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "dontplay_sports",
+			"examples": [
+				{
+					"text": "I don't like sports"
+				},
+				{
+					"text": "I don't play sports"
+				},
+				{
+					"text": "I don't play any sports"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "weekend",
+			"examples": [
+				{
+					"text": "I will"
+				},
+				{
+					"text": "I'm going to camp with my friends "
+				},
+				{
+					"text": "nothing"
+				},
+				{
+					"text": "I'm going to"
+				},
+				{
+					"text": "I am going to go"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "play",
+			"examples": [
+				{
+					"text": "I play"
+				},
+				{
+					"text": "I used to play"
+				},
+				{
+					"text": "I like to play"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "init",
+			"examples": [],
+			"description": null
+		},
+		{
+			"intent": "uncertain",
+			"examples": [
+				{
+					"text": "I don't know about that"
+				},
+				{
+					"text": "Maybe twice a month. I don't have a lot of free time. "
+				},
+				{
+					"text": "Maybe twice a month. I don't have a lot of free time."
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "goto",
+			"examples": [
+				{
+					"text": "Sometimes I go"
+				},
+				{
+					"text": "I go"
+				},
+				{
+					"text": "I usually go"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "student",
+			"examples": [
+				{
+					"text": "I'm in university"
+				},
+				{
+					"text": "I study"
+				},
+				{
+					"text": "I'm a student"
+				},
+				{
+					"text": "I'm in college"
+				},
+				{
+					"text": "I'm just a student"
+				},
+				{
+					"text": "I'm studenting"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "direct_negative_answer",
+			"examples": [
+				{
+					"text": "I don't want to"
+				},
+				{
+					"text": "No"
+				},
+				{
+					"text": "I don't like"
+				}
+			],
+			"description": null
+		}
+	],
+	"entities": [
+		{
+			"entity": "activities",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "club",
+					"metadata": null,
+					"synonyms": [
+						"clubbing"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "library",
+					"metadata": null,
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "park",
+					"metadata": null,
+					"synonyms": []
+				}
+			],
+			"metadata": null,
+			"description": null,
+			"fuzzy_match": true
+		},
+		{
+			"entity": "sys-number",
+			"values": [],
+			"metadata": null,
+			"description": null
+		},
+		{
+			"entity": "sports",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "crossfit",
+					"metadata": null,
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "football",
+					"metadata": null,
+					"synonyms": [
+						"soccer"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "tennis",
+					"metadata": null,
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "chess",
+					"metadata": null,
+					"synonyms": [
+						"majong"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "basketball",
+					"metadata": null,
+					"synonyms": [
+						"basket"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "volley",
+					"metadata": null,
+					"synonyms": [
+						"volleyball",
+						"volley ball"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "none",
+					"metadata": null,
+					"synonyms": [
+						"don't play",
+						"don't play sports",
+						"don't play any sports",
+						"no, i don't",
+						"no, i don't play"
+					]
+				}
+			],
+			"metadata": null,
+			"description": null,
+			"fuzzy_match": true
+		},
+		{
+			"entity": "sys-person",
+			"values": [],
+			"metadata": null,
+			"description": null
+		},
+		{
+			"entity": "sys-location",
+			"values": [],
+			"metadata": null,
+			"description": null
+		},
+		{
+			"entity": "people",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "parents",
+					"metadata": null,
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "brother",
+					"metadata": null,
+					"synonyms": [
+						"bro"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "neighbour",
+					"metadata": null,
+					"synonyms": [
+						"neighbours"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "mother",
+					"metadata": null,
+					"synonyms": [
+						"mom"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "friends",
+					"metadata": null,
+					"synonyms": [
+						"pals",
+						"colleagues"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "father",
+					"metadata": null,
+					"synonyms": [
+						"dad"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "family",
+					"metadata": null,
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "sister",
+					"metadata": null,
+					"synonyms": [
+						"sis"
+					]
+				}
+			],
+			"metadata": null,
+			"description": null,
+			"fuzzy_match": true
+		},
+		{
+			"entity": "dialog",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "friends",
+					"metadata": null,
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "sports",
+					"metadata": null,
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "routine",
+					"metadata": null,
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "weekend",
+					"metadata": null,
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "job",
+					"metadata": null,
+					"synonyms": []
+				}
+			],
+			"metadata": null,
+			"description": null
+		},
+		{
+			"entity": "sys-time",
+			"values": [],
+			"metadata": null,
+			"description": null
+		}
+	],
+	"dialog": {
+		"questions": [
+			{
+				"value": "What do you do? Do you work or are you a student?",
+				"intents": [
+					"student",
+					"work",
+					"studywork"
+				],
+				"answers": [
+					"Nice!",
+					"Great!"
+				]
+			},
+			{
+				"value": "Tell me, what do you do in your free time?  Do you play any sports?",
+				"intents": ["play","direct_positive_answer","direct_negative_answer","goto","dontplay_sports"],
+				"answers": ["Cool! Sometimes I like to play chess with my friends!","Nice, I like to play chess with my friends"]
+			},
+			{
+				"value": "What do you do every day? What time do you get up / start work?",
+				"intents": ["start_work","wakeup"],
+				"answers": ["That's nice, when I wake up I usually brush my teeth. You should do the same!"]
+			},
+			{
+				"value": "How often do you usually see your friends? (What do you do together?)",
+				"intents": ["goto","friends","uncertain","time"],
+				"answers": ["That's really nice!"]
+			},
+			{
+				"value": "What are you going to do at the weekend?",
+				"intents": ["weekend","uncertain","direct_negative_answer"],
+				"answers": ["I am going to stay all day long In my home (AKA CPU) watching netflix ;)"]
+			}
+		]
+	}
+}

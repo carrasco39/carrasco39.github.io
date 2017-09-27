@@ -1,0 +1,837 @@
+{
+    "intents": [
+        {
+            "intent": "social_activity_friends",
+            "examples": [
+                {
+                    "text": "We did a barbecue"
+                },
+                {
+                    "text": "I went on a picnic with my friends and i enjoyed it because it was outsite on a park "
+                },
+                {
+                    "text": "I stayed home with some friends"
+                },
+                {
+                    "text": "I went to a restaurant with my friends"
+                },
+                {
+                    "text": "Last week we went to the cinema, to watch"
+                },
+                {
+                    "text": "I did a barbecue with some friends and invited them"
+                },
+                {
+                    "text": "I went to a park and played soccer with my friends"
+                },
+                {
+                    "text": "we wnt out for dinner, and i like to eat a lot "
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "work",
+            "examples": [
+                {
+                    "text": "I work in a call center"
+                },
+                {
+                    "text": "I work at the cafe"
+                },
+                {
+                    "text": "I'm currently working"
+                },
+                {
+                    "text": "I have a job"
+                },
+                {
+                    "text": "I'm working"
+                },
+                {
+                    "text": "I work"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "advice",
+            "examples": [
+                {
+                    "text": "I would advise him to visit one of our beaches "
+                },
+                {
+                    "text": "i would say to him to be careful "
+                },
+                {
+                    "text": "I think you should"
+                },
+                {
+                    "text": "You must"
+                },
+                {
+                    "text": "Remember that"
+                },
+                {
+                    "text": "If I was you"
+                },
+                {
+                    "text": "You could"
+                },
+                {
+                    "text": "to be carefull "
+                },
+                {
+                    "text": "If I was you I would"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "movie_advice",
+            "examples": [
+                {
+                    "text": "I watched the"
+                },
+                {
+                    "text": "I saw the"
+                },
+                {
+                    "text": "I went to the cinema and watched"
+                },
+                {
+                    "text": "I went to see"
+                },
+                {
+                    "text": "I did see the"
+                },
+                {
+                    "text": "I saw avatar the last air bender, I didn't like it so no"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "start_work",
+            "examples": [
+                {
+                    "text": "i get up at 6 am, and i go to work at 8 am"
+                },
+                {
+                    "text": "I work"
+                },
+                {
+                    "text": "I work hard everyday"
+                },
+                {
+                    "text": "I work all day long"
+                },
+                {
+                    "text": "I enter at"
+                },
+                {
+                    "text": "I begin work"
+                },
+                {
+                    "text": "I start working"
+                },
+                {
+                    "text": "I start to work"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "wakeup",
+            "examples": [
+                {
+                    "text": "i get up"
+                },
+                {
+                    "text": "I get up late, most of the time in afternoons"
+                },
+                {
+                    "text": "I wake at"
+                },
+                {
+                    "text": "I wake"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "generation",
+            "examples": [
+                {
+                    "text": "huum, they hava a lot of tecnology in their hands... "
+                },
+                {
+                    "text": "I was ugly. Kids these days have breasts. I was fun. Kids these days are a pain in the ass. "
+                },
+                {
+                    "text": "In the past we had"
+                },
+                {
+                    "text": "We enjoyed the"
+                },
+                {
+                    "text": "When I was young"
+                },
+                {
+                    "text": "When I was three years old"
+                },
+                {
+                    "text": "we used to"
+                },
+                {
+                    "text": "nowadays everything is different"
+                },
+                {
+                    "text": "While young"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "play",
+            "examples": [
+                {
+                    "text": "I used to play"
+                },
+                {
+                    "text": "I like to play"
+                },
+                {
+                    "text": "I play"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "direct_negative_answer",
+            "examples": [
+                {
+                    "text": "I don't want to"
+                },
+                {
+                    "text": "No"
+                },
+                {
+                    "text": "I don't like"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "direct_positive_answer",
+            "examples": [
+                {
+                    "text": "Absolutely"
+                },
+                {
+                    "text": "Yes, I play!"
+                },
+                {
+                    "text": "Yes, it would be nice"
+                },
+                {
+                    "text": "Yes"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "weekend",
+            "examples": [
+                {
+                    "text": "I'm going to"
+                },
+                {
+                    "text": "I am going to go"
+                },
+                {
+                    "text": "I'm going to camp with my friends "
+                },
+                {
+                    "text": "nothing"
+                },
+                {
+                    "text": "I will"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "hobbies",
+            "examples": [
+                {
+                    "text": "I would like to talk about hobbies"
+                },
+                {
+                    "text": "hobbies"
+                },
+                {
+                    "text": "about hobbies"
+                },
+                {
+                    "text": "let's talk about hobbies"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "movie_recommendation",
+            "examples": [
+                {
+                    "text": "Yes, Is a good movie"
+                },
+                {
+                    "text": "I recommend it"
+                },
+                {
+                    "text": "I would recommend it"
+                },
+                {
+                    "text": "Is a good movie but"
+                },
+                {
+                    "text": "I wouldn't recommend it"
+                },
+                {
+                    "text": "Absolutely, it is a great movie"
+                },
+                {
+                    "text": "Is a good movie"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "goto",
+            "examples": [
+                {
+                    "text": "Sometimes I go"
+                },
+                {
+                    "text": "I usually go"
+                },
+                {
+                    "text": "I go"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "init",
+            "examples": [],
+            "description": null
+        },
+        {
+            "intent": "studywork",
+            "examples": [
+                {
+                    "text": "I work and study"
+                },
+                {
+                    "text": "both"
+                },
+                {
+                    "text": "I'm working and studenting"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "dontplay_sports",
+            "examples": [
+                {
+                    "text": "I don't play any sports"
+                },
+                {
+                    "text": "I don't play sports"
+                },
+                {
+                    "text": "I don't like sports"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "welcome",
+            "examples": [
+                {
+                    "text": "Hi"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "student",
+            "examples": [
+                {
+                    "text": "I'm just a student"
+                },
+                {
+                    "text": "I'm studenting"
+                },
+                {
+                    "text": "I study"
+                },
+                {
+                    "text": "I'm a student"
+                },
+                {
+                    "text": "I'm in college"
+                },
+                {
+                    "text": "I'm in university"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "time",
+            "examples": [
+                {
+                    "text": "in the morning "
+                },
+                {
+                    "text": "at 9 am"
+                },
+                {
+                    "text": "at 9 o clock"
+                },
+                {
+                    "text": "in the afternon"
+                },
+                {
+                    "text": "in the evening"
+                },
+                {
+                    "text": "in the morning"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "job",
+            "examples": [
+                {
+                    "text": "i want to talk about work"
+                },
+                {
+                    "text": "let's talk about jobs"
+                },
+                {
+                    "text": "about job"
+                },
+                {
+                    "text": "my job"
+                },
+                {
+                    "text": "jobs"
+                },
+                {
+                    "text": "job"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "friends",
+            "examples": [
+                {
+                    "text": "I see my friends"
+                },
+                {
+                    "text": "Almost every day"
+                },
+                {
+                    "text": "I see my friends hardly ever"
+                },
+                {
+                    "text": "I go to cinema with my friends"
+                },
+                {
+                    "text": "When I go out with my friends"
+                },
+                {
+                    "text": "My friends an I go out"
+                },
+                {
+                    "text": "My friends and I"
+                },
+                {
+                    "text": "We watch movies together"
+                },
+                {
+                    "text": "I always see them"
+                }
+            ],
+            "description": null
+        },
+        {
+            "intent": "social_activity_family",
+            "examples": [
+                {
+                    "text": "We played some videogames in my cousin's home"
+                },
+                {
+                    "text": "I went to the park "
+                },
+                {
+                    "text": "i went on a picnic "
+                },
+                {
+                    "text": "I went into my girlfriend house and we cooked together. It was cool because we enjoyed the whole evening together"
+                },
+                {
+                    "text": "I went to a restaurant with my familty"
+                },
+                {
+                    "text": "I stayed in my parent's house with my girlfriend"
+                },
+                {
+                    "text": "I went to my grandparent's house with my parents."
+                },
+                {
+                    "text": "Last week I went to a park with my parents"
+                },
+                {
+                    "text": "We had a barbecue in my aunt's house"
+                }
+            ],
+            "description": null
+        }
+    ],
+    "entities": [
+        {
+            "entity": "places",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "club",
+                    "metadata": null,
+                    "synonyms": [
+                        "clubbing"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "library",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "park",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "restaurant",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "hostel",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "house",
+                    "metadata": null,
+                    "synonyms": [
+                        "home"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "bar",
+                    "metadata": null,
+                    "synonyms": [
+                        "pub"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "hotel",
+                    "metadata": null,
+                    "synonyms": []
+                }
+            ],
+            "metadata": null,
+            "description": null,
+            "fuzzy_match": true
+        },
+        {
+            "entity": "sys-person",
+            "values": [],
+            "metadata": null,
+            "description": null
+        },
+        {
+            "entity": "sys-location",
+            "values": [],
+            "metadata": null,
+            "description": null
+        },
+        {
+            "entity": "sys-time",
+            "values": [],
+            "metadata": null,
+            "description": null
+        },
+        {
+            "entity": "people",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "parents",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "brother",
+                    "metadata": null,
+                    "synonyms": [
+                        "bro"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "neighbour",
+                    "metadata": null,
+                    "synonyms": [
+                        "neighbours"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "mother",
+                    "metadata": null,
+                    "synonyms": [
+                        "mom"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "friends",
+                    "metadata": null,
+                    "synonyms": [
+                        "pals",
+                        "colleagues"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "father",
+                    "metadata": null,
+                    "synonyms": [
+                        "dad"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "family",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "sister",
+                    "metadata": null,
+                    "synonyms": [
+                        "sis"
+                    ]
+                }
+            ],
+            "metadata": null,
+            "description": null,
+            "fuzzy_match": true
+        },
+        {
+            "entity": "activities",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "rest",
+                    "metadata": null,
+                    "synonyms": [
+                        "rested"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "barbecue",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "nothing",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "picnic",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "netflix",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "chill",
+                    "metadata": null,
+                    "synonyms": [
+                        "chilled"
+                    ]
+                }
+            ],
+            "metadata": null,
+            "description": null
+        },
+        {
+            "entity": "sys-number",
+            "values": [],
+            "metadata": null,
+            "description": null
+        },
+        {
+            "entity": "sports",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "crossfit",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "football",
+                    "metadata": null,
+                    "synonyms": [
+                        "soccer"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "tennis",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "chess",
+                    "metadata": null,
+                    "synonyms": [
+                        "majong"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "basketball",
+                    "metadata": null,
+                    "synonyms": [
+                        "basket"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "volley",
+                    "metadata": null,
+                    "synonyms": [
+                        "volleyball",
+                        "volley ball"
+                    ]
+                },
+                {
+                    "type": "synonyms",
+                    "value": "none",
+                    "metadata": null,
+                    "synonyms": [
+                        "don't play",
+                        "don't play sports",
+                        "don't play any sports",
+                        "no, i don't",
+                        "no, i don't play"
+                    ]
+                }
+            ],
+            "metadata": null,
+            "description": null,
+            "fuzzy_match": true
+        },
+        {
+            "entity": "dialog",
+            "values": [
+                {
+                    "type": "synonyms",
+                    "value": "friends",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "sports",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "routine",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "weekend",
+                    "metadata": null,
+                    "synonyms": []
+                },
+                {
+                    "type": "synonyms",
+                    "value": "job",
+                    "metadata": null,
+                    "synonyms": []
+                }
+            ],
+            "metadata": null,
+            "description": null
+        }
+	],
+	"dialog": {
+        "questions": [
+            {
+                "value": "Tell me about something that you did with your friends/family recently.  Why did you enjoy it?",
+                "intents": ["social_activity_family","social_activity_friends","weekend"],
+                "answers": ["Nice, I went to the mall with my boyfriend Theodore"]
+            },
+            {
+                "value": "Imagine that a friend of yours, who lives abroad, is coming to visit you in Brazil. What advice would you give him or her?",
+                "intents": ["advice"],
+                "answers": ["Alright, let's move on..."]
+            },
+            {
+                "value": "Tell me about the last movie you saw at the cinema.  Would you recommend it?",
+                "intents": ["movie_advice","movie_recommendation"],
+                "answers": []
+            },
+            {
+                "value": "Talking about generation gap. What are the pros e cons if you compare yourself when you were 10 years old and a kid that today is 10 years?",
+                "intents": ["generation"],
+                "answers": ["Cool, It's interesting to see the differences between the generations."]
+            }
+        ]
+    }
+}

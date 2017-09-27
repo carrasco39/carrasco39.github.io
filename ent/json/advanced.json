@@ -1,0 +1,400 @@
+{
+	"intents": [
+		{
+			"intent": "climate",
+			"examples": [
+				{
+					"text": "Yes I'm concerned, I think the climate are changing and the greenhouse effect is very harmful for us. The evidence is that we is that each year the seasons become more powerful"
+				},
+				{
+					"text": "Yes I'm concerned"
+				},
+				{
+					"text": "I think that global warm is something created from the media to sell this idea "
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "advertising",
+			"examples": [
+				{
+					"text": "The advertisements should be like"
+				},
+				{
+					"text": "I think it's not that effective"
+				},
+				{
+					"text": "I think it's is cool"
+				},
+				{
+					"text": "The adverts should sounds a bit more intriguing"
+				},
+				{
+					"text": "Sometimes they are not that persuasive"
+				},
+				{
+					"text": "An advert should be very persuasive"
+				},
+				{
+					"text": "It depends upon the"
+				},
+				{
+					"text": "Netflix's latest advert was very emotional"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "learn_language",
+			"examples": [
+				{
+					"text": "I would recommend starting from"
+				},
+				{
+					"text": "I would recommend using dictionary"
+				},
+				{
+					"text": "They should start from"
+				},
+				{
+					"text": "They could find an app"
+				},
+				{
+					"text": "They could use a book or dictionary"
+				},
+				{
+					"text": "The person can find"
+				},
+				{
+					"text": "the probably best alternative is to find a good teacher"
+				}
+			],
+			"description": null
+		},
+		{
+			"intent": "image",
+			"examples": [
+				{
+					"text": "They think our food is amazing and the people are very friendly. I agree with them but I think brazil is very dangerous "
+				},
+				{
+					"text": "I think they don't have a good image about us"
+				},
+				{
+					"text": "Naturally our country don't have a good image"
+				},
+				{
+					"text": "They usally don't have a good image about our country, because our people are very festive and pretentious. But our tourism says the contrary, and people love our food, and indeed It's amazing. I don't know if it is accurate because it's a very general question to be precise."
+				},
+				{
+					"text": "They have a good image"
+				},
+				{
+					"text": "They don't have a good image"
+				},
+				{
+					"text": "I don't know if it's accurate or not"
+				},
+				{
+					"text": "People tend to think that we are all monkeys"
+				}
+			],
+			"description": null
+		}
+	],
+	"entities": [
+		{
+			"entity": "sys-number",
+			"values": [],
+			"description": null
+		},
+		{
+			"entity": "dialog",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "advertising",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "language",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "image",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "climate",
+					"synonyms": []
+				}
+			],
+			"description": null,
+			"fuzzy_match": true
+		},
+		{
+			"entity": "none",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "none",
+					"synonyms": []
+				}
+			],
+			"description": null
+		},
+		{
+			"entity": "places",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "club",
+					"synonyms": [
+						"clubbing"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "library",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "park",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "restaurant",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "hostel",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "house",
+					"synonyms": [
+						"home"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "bar",
+					"synonyms": [
+						"pub"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "hotel",
+					"synonyms": []
+				}
+			],
+			"description": null,
+			"fuzzy_match": true
+		},
+		{
+			"entity": "sys-person",
+			"values": [],
+			"description": null
+		},
+		{
+			"entity": "activities",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "rest",
+					"synonyms": [
+						"rested"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "barbecue",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "nothing",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "picnic",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "netflix",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "chill",
+					"synonyms": [
+						"chilled"
+					]
+				}
+			],
+			"description": null
+		},
+		{
+			"entity": "sys-time",
+			"values": [],
+			"description": null
+		},
+		{
+			"entity": "sports",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "crossfit",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "football",
+					"synonyms": [
+						"soccer"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "tennis",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "chess",
+					"synonyms": [
+						"majong"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "basketball",
+					"synonyms": [
+						"basket"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "volley",
+					"synonyms": [
+						"volleyball",
+						"volley ball"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "none",
+					"synonyms": [
+						"don't play",
+						"don't play sports",
+						"don't play any sports",
+						"no, i don't",
+						"no, i don't play"
+					]
+				}
+			],
+			"description": null,
+			"fuzzy_match": true
+		},
+		{
+			"entity": "sys-location",
+			"values": [],
+			"description": null
+		},
+		{
+			"entity": "people",
+			"values": [
+				{
+					"type": "synonyms",
+					"value": "parents",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "brother",
+					"synonyms": [
+						"bro"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "neighbour",
+					"synonyms": [
+						"neighbours"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "mother",
+					"synonyms": [
+						"mom"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "friends",
+					"synonyms": [
+						"pals",
+						"colleagues"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "father",
+					"synonyms": [
+						"dad"
+					]
+				},
+				{
+					"type": "synonyms",
+					"value": "family",
+					"synonyms": []
+				},
+				{
+					"type": "synonyms",
+					"value": "sister",
+					"synonyms": [
+						"sis"
+					]
+				}
+			],
+			"description": null,
+			"fuzzy_match": true
+		}
+	],
+	"dialog": {
+		"questions": [
+			{
+				"value": "If an English person wanted to learn your language, how should they do this and why?",
+				"intents": ["learn_english"],
+				"answers": ["Language is one of my favourites things, there's so many possibilities. It's incredible."]
+			},
+			{
+				"value": "Describe an advert you have seen.  How effective do you think it is?",
+				"intents": ["advertising"],
+				"answers": ["Alright, let's move on."]
+			},
+			{
+				"value": "What image do other people have of your country, its food and its people? Do you think it is accurate?",
+				"intents": ["image"],
+				"answers": ["Ok, let's move to the another question"]
+			},
+			{
+				"value": "Are you concerned about climate change? What evidence of it is there in your country?",
+				"intents": ["climate"],
+				"answers": ["Sometimes my CPU heat is soooo high that I want to jump of the RAM and become a physical human!"]
+			}
+		]
+	}
+}
