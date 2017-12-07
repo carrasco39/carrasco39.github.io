@@ -22265,6 +22265,7 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.cnds.EveryTick,
 	cr.plugins_.Touch.prototype.cnds.IsTouchingObject,
 	cr.system_object.prototype.cnds.Every,
+	cr.plugins_.Touch.prototype.cnds.OnTouchObject,
 	cr.plugins_.Rex_MomenJS.prototype.acts.Add,
 	cr.plugins_.Rex_MomenJS.prototype.exps.ElapsedSeconds,
 	cr.system_object.prototype.exps.floor,
