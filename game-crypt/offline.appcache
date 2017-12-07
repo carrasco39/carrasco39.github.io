@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1512141793
+#1512678304
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -51,14 +51,16 @@ images/spritefont.png
 images/tile_grid-sheet0.png
 images/board2-sheet0.png
 images/piece_player-sheet0.png
+images/stage-sheet0.png
 icon-16.png
 icon-32.png
 icon-114.png
 icon-128.png
 icon-256.png
 loading-logo.png
-board.json
-board2.json
-board3.json
+stage1.json
+stage2.json
+stage3.json
+moment-with-locales.min.js
 NETWORK:
 *
