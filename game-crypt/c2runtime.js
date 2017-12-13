@@ -26009,6 +26009,7 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.NinePatch.prototype.acts.SetX,
 	cr.system_object.prototype.cnds.Else,
 	cr.behaviors.DragnDrop.prototype.cnds.OnDrop,
+	cr.plugins_.Sprite.prototype.cnds.IsOutsideLayout,
 	cr.system_object.prototype.cnds.While,
 	cr.system_object.prototype.acts.StopLoop,
 	cr.plugins_.NinePatch.prototype.cnds.IsOutsideLayout,
