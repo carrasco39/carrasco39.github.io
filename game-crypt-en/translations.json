@@ -64,5 +64,15 @@
     "lblNivelRisco": {
         "pt_BR": "ESCOLHA UM NÍVEL DE RISCO",
         "en_US": "CHOOSE A LEVEL OF RISK"
+    },
+    "feedback": {
+        "pt_BR": "Seu feedback é muito bem vindo. Caso tenha alguma crítica ou sugestão, entre em contato conosco através do email allan.petcov@matchboxbrasil.com",
+        "en_US": "Your feedback is very welcome. If you have any critic or sugestion, please contact us at allan.petcov@matchboxbrasil.com"
+    },
+    "feedback2": {
+        "fun": 0,
+        "interesting": 0,
+        "learning": 0,
+        "text": "lalalalaa"
     }
 }
