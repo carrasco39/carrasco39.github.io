@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1515436160
+#1516104512
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -109,6 +109,17 @@ images/board2-sheet0.png
 images/piece_player-sheet0.png
 images/stage-sheet0.png
 images/background-sheet0.png
+images/windowbg.png
+media/ativar-codigo-33482__cosmicd__001_editado.m4a
+media/ativar-codigo-33482__cosmicd__001_editado.ogg
+media/level-complete-31822__ihatetoregister__blip.m4a
+media/level-complete-31822__ihatetoregister__blip.ogg
+media/btn-history-and-bet-321104__nsstudios__blip2.m4a
+media/btn-history-and-bet-321104__nsstudios__blip2.ogg
+media/place-piece-321103__nsstudios__blip1.m4a
+media/place-piece-321103__nsstudios__blip1.ogg
+media/select-level-robot_blip-marianne_gagnon-120342607.m4a
+media/select-level-robot_blip-marianne_gagnon-120342607.ogg
 icon-16.png
 icon-32.png
 icon-114.png
