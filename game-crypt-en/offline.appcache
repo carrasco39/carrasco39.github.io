@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1516104512
+#1516134813
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -56,12 +56,16 @@ images/menubkg-sheet1.png
 images/menubkg-sheet2.png
 images/spritemedio-sheet0.png
 images/spritemedio-sheet1.png
+images/spritemedio-sheet2.png
 images/spritealto-sheet0.png
 images/spritealto-sheet1.png
+images/spritealto-sheet2.png
 images/spriteinsano-sheet0.png
 images/spriteinsano-sheet1.png
+images/spriteinsano-sheet2.png
 images/brilhorelogio-sheet0.png
 images/btnregras-sheet0.png
+images/btnregras-sheet1.png
 images/btnfinalizar-sheet0.png
 images/btnvoltar2-sheet0.png
 images/btnativarcodigo-sheet0.png
@@ -110,6 +114,8 @@ images/piece_player-sheet0.png
 images/stage-sheet0.png
 images/background-sheet0.png
 images/windowbg.png
+images/flagbr-sheet0.png
+images/flagen-sheet0.png
 media/ativar-codigo-33482__cosmicd__001_editado.m4a
 media/ativar-codigo-33482__cosmicd__001_editado.ogg
 media/level-complete-31822__ihatetoregister__blip.m4a
