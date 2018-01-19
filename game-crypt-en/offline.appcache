@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1516199926
+#1516388430
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -49,17 +49,14 @@ images/bgtentativa.png
 images/iconarrow-sheet0.png
 images/btntrybackward-sheet0.png
 images/btnvoltar.png
+images/bgscore.png
 images/btnstagechooser.png
 images/spritebaixo-sheet0.png
 images/menubkg-sheet0.png
-images/menubkg-sheet1.png
-images/menubkg-sheet2.png
 images/spritemedio-sheet0.png
 images/spritemedio-sheet1.png
 images/spritemedio-sheet2.png
 images/spritealto-sheet0.png
-images/spritealto-sheet1.png
-images/spritealto-sheet2.png
 images/spriteinsano-sheet0.png
 images/spriteinsano-sheet1.png
 images/spriteinsano-sheet2.png
@@ -78,6 +75,7 @@ images/btnprior-sheet1.png
 images/btnnext-sheet0.png
 images/btnnext-sheet1.png
 images/bgclearstage-sheet0.png
+images/check-sheet0.png
 images/btnok-sheet0.png
 images/btnpriortut-sheet0.png
 images/btnpriortut-sheet1.png
@@ -86,6 +84,7 @@ images/btnnexttut-sheet1.png
 images/btnpulartutorial-sheet0.png
 images/btnok2-sheet0.png
 images/window-sheet0.png
+images/window-sheet1.png
 images/bkgloginmenu-sheet0.png
 images/logo_amaze-sheet0.png
 images/powered_by-sheet0.png
@@ -104,7 +103,6 @@ images/tut01-sheet6.png
 images/bglabelfeedback.png
 images/bgfb.png
 images/btnfeedback-sheet0.png
-images/board.png
 images/sprite-sheet0.png
 images/placeholder-sheet0.png
 images/spritefont.png
@@ -115,7 +113,10 @@ images/stage-sheet0.png
 images/background-sheet0.png
 images/windowbg.png
 images/flagbr-sheet0.png
+images/flagbr-sheet1.png
 images/flagen-sheet0.png
+images/flagen-sheet1.png
+images/coloreee-sheet0.png
 media/ativar-codigo-33482__cosmicd__001_editado.m4a
 media/ativar-codigo-33482__cosmicd__001_editado.ogg
 media/level-complete-31822__ihatetoregister__blip.m4a

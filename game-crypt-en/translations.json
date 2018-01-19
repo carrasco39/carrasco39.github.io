@@ -58,12 +58,12 @@
         "en_US": "If the time is ending and you don't wish to risk anymore you can finalize the game at anytime"
     },
     "lblFase_min": {
-        "pt_BR": "APOSTA MÍNIMA",
-        "en_US": "LOWER BET"
+        "pt_BR": "PRÊMIO",
+        "en_US": "PRIZE"
     },
     "lblFase_max": {
-        "pt_BR": "APOSTA MÁXIMA",
-        "en_US": "HIGHEST BET"
+        "pt_BR": "LUCRO",
+        "en_US": "PROFIT"
     },
     "lblFase_mult": {
         "pt_BR": "MULTIPLICADOR DE GANHO",
@@ -78,12 +78,12 @@
         "en_US": "TRY"
     },
     "lblFase_max_clear": {
-        "pt_BR": "QUANTO GASTOU",
-        "en_US": "TOTAL SPENT"
+        "pt_BR": "LUCRO",
+        "en_US": "PROFIT"
     },
     "lblFase_mult_clear": {
-        "pt_BR": "QUANTO GANHOU",
-        "en_US": "TOTAL GAINED"
+        "pt_BR": "TENTATIVA",
+        "en_US": "TRY"
     },
     "txtHistorico": {
         "pt_BR": "HISTÓRICO DE TENTATIVAS",

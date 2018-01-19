@@ -14979,6 +14979,23 @@ cr.shaders["glowvertical"] = {src: ["varying mediump vec2 vTex;",
 	preservesOpaqueness: false,
 	animated: false,
 	parameters: [["intensity", 0, 1]] }
+cr.shaders["setcolor"] = {src: ["varying mediump vec2 vTex;",
+"uniform lowp sampler2D samplerFront;",
+"uniform lowp float red;",
+"uniform lowp float green;",
+"uniform lowp float blue;",
+"void main(void)",
+"{",
+"lowp float a = texture2D(samplerFront, vTex).a;",
+"gl_FragColor = vec4(red * a, green * a, blue * a, a);",
+"}"
+].join("\n"),
+	extendBoxHorizontal: 0,
+	extendBoxVertical: 0,
+	crossSampling: false,
+	preservesOpaqueness: true,
+	animated: false,
+	parameters: [["red", 0, 1], ["green", 0, 1], ["blue", 0, 1]] }
 ;
 ;
 cr.plugins_.AJAX = function(runtime)
@@ -20439,6 +20456,239 @@ cr.plugins_.Function = function(runtime)
 		}
 		popFuncStack();
 		ret.set_any(fs.retVal);
+	};
+	pluginProto.exps = new Exps();
+}());
+;
+;
+cr.plugins_.Keyboard = function(runtime)
+{
+	this.runtime = runtime;
+};
+(function ()
+{
+	var pluginProto = cr.plugins_.Keyboard.prototype;
+	pluginProto.Type = function(plugin)
+	{
+		this.plugin = plugin;
+		this.runtime = plugin.runtime;
+	};
+	var typeProto = pluginProto.Type.prototype;
+	typeProto.onCreate = function()
+	{
+	};
+	pluginProto.Instance = function(type)
+	{
+		this.type = type;
+		this.runtime = type.runtime;
+		this.keyMap = new Array(256);	// stores key up/down state
+		this.usedKeys = new Array(256);
+		this.triggerKey = 0;
+	};
+	var instanceProto = pluginProto.Instance.prototype;
+	instanceProto.onCreate = function()
+	{
+		var self = this;
+		if (!this.runtime.isDomFree)
+		{
+			jQuery(document).keydown(
+				function(info) {
+					self.onKeyDown(info);
+				}
+			);
+			jQuery(document).keyup(
+				function(info) {
+					self.onKeyUp(info);
+				}
+			);
+		}
+	};
+	var keysToBlockWhenFramed = [32, 33, 34, 35, 36, 37, 38, 39, 40, 44];
+	instanceProto.onKeyDown = function (info)
+	{
+		var alreadyPreventedDefault = false;
+		if (window != window.top && keysToBlockWhenFramed.indexOf(info.which) > -1)
+		{
+			info.preventDefault();
+			alreadyPreventedDefault = true;
+			info.stopPropagation();
+		}
+		if (this.keyMap[info.which])
+		{
+			if (this.usedKeys[info.which] && !alreadyPreventedDefault)
+				info.preventDefault();
+			return;
+		}
+		this.keyMap[info.which] = true;
+		this.triggerKey = info.which;
+		this.runtime.isInUserInputEvent = true;
+		this.runtime.trigger(cr.plugins_.Keyboard.prototype.cnds.OnAnyKey, this);
+		var eventRan = this.runtime.trigger(cr.plugins_.Keyboard.prototype.cnds.OnKey, this);
+		var eventRan2 = this.runtime.trigger(cr.plugins_.Keyboard.prototype.cnds.OnKeyCode, this);
+		this.runtime.isInUserInputEvent = false;
+		if (eventRan || eventRan2)
+		{
+			this.usedKeys[info.which] = true;
+			if (!alreadyPreventedDefault)
+				info.preventDefault();
+		}
+	};
+	instanceProto.onKeyUp = function (info)
+	{
+		this.keyMap[info.which] = false;
+		this.triggerKey = info.which;
+		this.runtime.isInUserInputEvent = true;
+		this.runtime.trigger(cr.plugins_.Keyboard.prototype.cnds.OnAnyKeyReleased, this);
+		var eventRan = this.runtime.trigger(cr.plugins_.Keyboard.prototype.cnds.OnKeyReleased, this);
+		var eventRan2 = this.runtime.trigger(cr.plugins_.Keyboard.prototype.cnds.OnKeyCodeReleased, this);
+		this.runtime.isInUserInputEvent = false;
+		if (eventRan || eventRan2 || this.usedKeys[info.which])
+		{
+			this.usedKeys[info.which] = true;
+			info.preventDefault();
+		}
+	};
+	instanceProto.onWindowBlur = function ()
+	{
+		var i;
+		for (i = 0; i < 256; ++i)
+		{
+			if (!this.keyMap[i])
+				continue;		// key already up
+			this.keyMap[i] = false;
+			this.triggerKey = i;
+			this.runtime.trigger(cr.plugins_.Keyboard.prototype.cnds.OnAnyKeyReleased, this);
+			var eventRan = this.runtime.trigger(cr.plugins_.Keyboard.prototype.cnds.OnKeyReleased, this);
+			var eventRan2 = this.runtime.trigger(cr.plugins_.Keyboard.prototype.cnds.OnKeyCodeReleased, this);
+			if (eventRan || eventRan2)
+				this.usedKeys[i] = true;
+		}
+	};
+	instanceProto.saveToJSON = function ()
+	{
+		return { "triggerKey": this.triggerKey };
+	};
+	instanceProto.loadFromJSON = function (o)
+	{
+		this.triggerKey = o["triggerKey"];
+	};
+	function Cnds() {};
+	Cnds.prototype.IsKeyDown = function(key)
+	{
+		return this.keyMap[key];
+	};
+	Cnds.prototype.OnKey = function(key)
+	{
+		return (key === this.triggerKey);
+	};
+	Cnds.prototype.OnAnyKey = function(key)
+	{
+		return true;
+	};
+	Cnds.prototype.OnAnyKeyReleased = function(key)
+	{
+		return true;
+	};
+	Cnds.prototype.OnKeyReleased = function(key)
+	{
+		return (key === this.triggerKey);
+	};
+	Cnds.prototype.IsKeyCodeDown = function(key)
+	{
+		key = Math.floor(key);
+		if (key < 0 || key >= this.keyMap.length)
+			return false;
+		return this.keyMap[key];
+	};
+	Cnds.prototype.OnKeyCode = function(key)
+	{
+		return (key === this.triggerKey);
+	};
+	Cnds.prototype.OnKeyCodeReleased = function(key)
+	{
+		return (key === this.triggerKey);
+	};
+	pluginProto.cnds = new Cnds();
+	function Acts() {};
+	pluginProto.acts = new Acts();
+	function Exps() {};
+	Exps.prototype.LastKeyCode = function (ret)
+	{
+		ret.set_int(this.triggerKey);
+	};
+	function fixedStringFromCharCode(kc)
+	{
+		kc = Math.floor(kc);
+		switch (kc) {
+		case 8:		return "backspace";
+		case 9:		return "tab";
+		case 13:	return "enter";
+		case 16:	return "shift";
+		case 17:	return "control";
+		case 18:	return "alt";
+		case 19:	return "pause";
+		case 20:	return "capslock";
+		case 27:	return "esc";
+		case 33:	return "pageup";
+		case 34:	return "pagedown";
+		case 35:	return "end";
+		case 36:	return "home";
+		case 37:	return "←";
+		case 38:	return "↑";
+		case 39:	return "→";
+		case 40:	return "↓";
+		case 45:	return "insert";
+		case 46:	return "del";
+		case 91:	return "left window key";
+		case 92:	return "right window key";
+		case 93:	return "select";
+		case 96:	return "numpad 0";
+		case 97:	return "numpad 1";
+		case 98:	return "numpad 2";
+		case 99:	return "numpad 3";
+		case 100:	return "numpad 4";
+		case 101:	return "numpad 5";
+		case 102:	return "numpad 6";
+		case 103:	return "numpad 7";
+		case 104:	return "numpad 8";
+		case 105:	return "numpad 9";
+		case 106:	return "numpad *";
+		case 107:	return "numpad +";
+		case 109:	return "numpad -";
+		case 110:	return "numpad .";
+		case 111:	return "numpad /";
+		case 112:	return "F1";
+		case 113:	return "F2";
+		case 114:	return "F3";
+		case 115:	return "F4";
+		case 116:	return "F5";
+		case 117:	return "F6";
+		case 118:	return "F7";
+		case 119:	return "F8";
+		case 120:	return "F9";
+		case 121:	return "F10";
+		case 122:	return "F11";
+		case 123:	return "F12";
+		case 144:	return "numlock";
+		case 145:	return "scroll lock";
+		case 186:	return ";";
+		case 187:	return "=";
+		case 188:	return ",";
+		case 189:	return "-";
+		case 190:	return ".";
+		case 191:	return "/";
+		case 192:	return "'";
+		case 219:	return "[";
+		case 220:	return "\\";
+		case 221:	return "]";
+		case 222:	return "#";
+		case 223:	return "`";
+		default:	return String.fromCharCode(kc);
+		}
+	};
+	Exps.prototype.StringFromKeyCode = function (ret, kc)
+	{
+		ret.set_string(fixedStringFromCharCode(kc));
 	};
 	pluginProto.exps = new Exps();
 }());
@@ -33408,27 +33658,28 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Arr,
 	cr.plugins_.Audio,
 	cr.plugins_.Dictionary,
+	cr.plugins_.Button,
 	cr.plugins_.armaldio_translate,
 	cr.plugins_.Browser,
-	cr.plugins_.Button,
-	cr.plugins_.Function,
 	cr.plugins_.Mouse,
-	cr.plugins_.Touch,
-	cr.plugins_.Rex_MomenJS,
-	cr.plugins_.Sprite,
-	cr.plugins_.Rex_Firebase_Authentication,
-	cr.plugins_.Rex_FirebaseAPIV3,
-	cr.plugins_.Rex_Firebase,
-	cr.plugins_.rex_TagText,
-	cr.plugins_.Spritefont2,
-	cr.plugins_.Rex_GoogleWebFontLoader,
+	cr.plugins_.Keyboard,
+	cr.plugins_.Function,
 	cr.plugins_.Text,
+	cr.plugins_.rex_TagText,
 	cr.plugins_.Rex_Firebase_Query,
 	cr.plugins_.Rex_Firebase_ItemTable,
+	cr.plugins_.Sprite,
 	cr.plugins_.TextBox,
+	cr.plugins_.Rex_Firebase,
+	cr.plugins_.Rex_Firebase_Authentication,
+	cr.plugins_.Rex_MomenJS,
+	cr.plugins_.Spritefont2,
+	cr.plugins_.Touch,
+	cr.plugins_.Rex_GoogleWebFontLoader,
+	cr.plugins_.Rex_FirebaseAPIV3,
 	cr.behaviors.Pin,
-	cr.behaviors.Fade,
 	cr.behaviors.Timer,
+	cr.behaviors.Fade,
 	cr.behaviors.DragnDrop,
 	cr.behaviors.solid,
 	cr.behaviors.Flash,
@@ -33437,8 +33688,6 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.acts.SetVar,
 	cr.plugins_.Sprite.prototype.acts.SetOpacity,
 	cr.plugins_.Sprite.prototype.acts.StopAnim,
-	cr.plugins_.Text.prototype.acts.SetText,
-	cr.plugins_.armaldio_translate.prototype.exps.GetValue,
 	cr.system_object.prototype.cnds.CompareVar,
 	cr.plugins_.AJAX.prototype.acts.RequestFile,
 	cr.plugins_.Dictionary.prototype.cnds.HasKey,
@@ -33469,6 +33718,7 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.exps.random,
 	cr.plugins_.Sprite.prototype.exps.UID,
 	cr.plugins_.Sprite.prototype.acts.MoveToTop,
+	cr.plugins_.Text.prototype.acts.SetText,
 	cr.plugins_.Function.prototype.exps.Param,
 	cr.plugins_.Sprite.prototype.cnds.PickByUID,
 	cr.plugins_.Sprite.prototype.cnds.CompareInstanceVar,
@@ -33479,6 +33729,8 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Dictionary.prototype.acts.SetKey,
 	cr.plugins_.Arr.prototype.exps.AsJSON,
 	cr.system_object.prototype.acts.GoToLayout,
+	cr.plugins_.armaldio_translate.prototype.exps.GetValue,
+	cr.plugins_.Sprite.prototype.acts.SetAnim,
 	cr.behaviors.DragnDrop.prototype.cnds.IsDragging,
 	cr.plugins_.NinePatch.prototype.acts.SetSize,
 	cr.plugins_.Sprite.prototype.exps.Width,
@@ -33533,44 +33785,55 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.cnds.Compare,
 	cr.system_object.prototype.cnds.EveryTick,
 	cr.system_object.prototype.exps.len,
-	cr.plugins_.Touch.prototype.cnds.IsTouchingObject,
-	cr.system_object.prototype.cnds.Every,
 	cr.plugins_.Text.prototype.acts.SetPos,
 	cr.plugins_.Text.prototype.exps.X,
+	cr.plugins_.Text.prototype.exps.Width,
 	cr.plugins_.Text.prototype.exps.Y,
+	cr.plugins_.Text.prototype.exps.Height,
 	cr.behaviors.Timer.prototype.acts.StartTimer,
 	cr.behaviors.Physics.prototype.acts.SetEnabled,
 	cr.behaviors.Physics.prototype.acts.SetWorldGravity,
 	cr.behaviors.Timer.prototype.cnds.OnTimer,
 	cr.plugins_.Text.prototype.acts.SetOpacity,
 	cr.plugins_.Text.prototype.acts.SetX,
+	cr.plugins_.NinePatch.prototype.acts.AddInstanceVar,
+	cr.system_object.prototype.exps.dt,
+	cr.plugins_.Text.prototype.cnds.CompareInstanceVar,
+	cr.plugins_.Text.prototype.acts.AddInstanceVar,
+	cr.plugins_.NinePatch.prototype.acts.SubInstanceVar,
+	cr.plugins_.Text.prototype.acts.SetInstanceVar,
+	cr.plugins_.NinePatch.prototype.acts.SetEffectParam,
 	cr.plugins_.Touch.prototype.cnds.OnTouchObject,
 	cr.plugins_.Rex_MomenJS.prototype.acts.Add,
 	cr.plugins_.Text.prototype.acts.SetVisible,
-	cr.plugins_.Text.prototype.cnds.CompareInstanceVar,
+	cr.plugins_.Sprite.prototype.acts.SetY,
 	cr.plugins_.Mouse.prototype.cnds.IsOverObject,
 	cr.plugins_.Sprite.prototype.cnds.CompareFrame,
 	cr.behaviors.Fade.prototype.exps.FadeInTime,
 	cr.behaviors.Fade.prototype.exps.FadeOutTime,
+	cr.system_object.prototype.acts.WaitForSignal,
 	cr.plugins_.Browser.prototype.acts.GoToURLWindow,
 	cr.plugins_.Rex_MomenJS.prototype.acts.SetToCurrentDate,
 	cr.system_object.prototype.exps.str,
 	cr.plugins_.Dictionary.prototype.acts.JSONLoad,
-	cr.plugins_.Sprite.prototype.acts.SetAnim,
 	cr.plugins_.Mouse.prototype.acts.SetCursor,
+	cr.plugins_.armaldio_translate.prototype.acts.LoadDic,
+	cr.plugins_.armaldio_translate.prototype.exps.GetCurrentLanguage,
+	cr.system_object.prototype.acts.Signal,
 	cr.system_object.prototype.exps.floor,
 	cr.plugins_.Rex_MomenJS.prototype.exps.ElapsedSeconds,
 	cr.plugins_.Rex_GoogleWebFontLoader.prototype.acts.AddGoogleFont,
 	cr.plugins_.Rex_GoogleWebFontLoader.prototype.acts.Load,
+	cr.plugins_.Text.prototype.acts.SetEffectParam,
 	cr.plugins_.Rex_GoogleWebFontLoader.prototype.cnds.OnActive,
-	cr.plugins_.armaldio_translate.prototype.acts.LoadDic,
-	cr.plugins_.armaldio_translate.prototype.exps.GetCurrentLanguage,
 	cr.plugins_.armaldio_translate.prototype.acts.SetLanguage,
+	cr.system_object.prototype.cnds.Every,
 	cr.plugins_.TextBox.prototype.acts.SetCSSStyle,
+	cr.plugins_.Keyboard.prototype.cnds.OnKey,
 	cr.plugins_.TextBox.prototype.exps.Text,
 	cr.plugins_.TextBox.prototype.cnds.OnTextChanged,
+	cr.plugins_.TextBox.prototype.acts.SetFocus,
 	cr.system_object.prototype.exps.uppercase,
-	cr.plugins_.Text.prototype.acts.SetInstanceVar,
 	cr.plugins_.rex_TagText.prototype.acts.SetText,
 	cr.plugins_.Sprite.prototype.acts.SetAnimSpeed,
 	cr.system_object.prototype.acts.Wait,
