@@ -1,6 +1,6 @@
 {
-"companyName": "DefaultCompany",
-"productName": "megazebra-test",
+"companyName": "Carrasco",
+"productName": "MemoryGame Sample",
 "dataUrl": "WebGL.data.unityweb",
 "asmCodeUrl": "WebGL.asm.code.unityweb",
 "asmMemoryUrl": "WebGL.asm.memory.unityweb",
